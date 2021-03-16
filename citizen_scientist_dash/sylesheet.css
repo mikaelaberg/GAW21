@@ -34,6 +34,22 @@ html {
     padding: 20px;
 
 }
+.DOColumn {
+    float: left;
+    height: 600px;
+    width: 150px;
+    font-size: 16px;
+    background-color: white;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+
+    margin: 20px;
+    padding: 20px;
+
+}
 
 
 button {
