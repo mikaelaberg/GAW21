@@ -1,4 +1,4 @@
-# Useful Like reference
+# Useful Link reference
 https://www.w3schools.com/w3css/w3css_demo.asp
 
 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_examples_material
