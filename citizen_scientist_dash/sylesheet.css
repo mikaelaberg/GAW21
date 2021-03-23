@@ -2,29 +2,45 @@ html {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(236, 236, 236);
 }
-h2 {
+
+a:link, a:visited {
+  background-color: #3f4fac;
+  color: white;
+  padding: 16px;
   text-align: center;
-  font-size: 30px;
+  text-decoration: none;
+  display: inline-block;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  cursor: pointer;
 }
-img#getImage {
-  width: 300px;
-  height: auto;  
-  border: 4px solid #a1a1a1;  
+
+a:hover, a:active {
+  background-color: rgb(84, 84, 202);
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .SquareBins {
     height: 300px;
-    width: 380px;
+    width: 322px;
     font-size: 16px;
     background-color: white;
 
     border-width: 1px;
     border-color: black;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 5px;
 
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .WaterColumn {
@@ -37,10 +53,10 @@ img#getImage {
     border-width: 1px;
     border-color: black;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 5px;
 
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
 
 }
 .DOColumn {
@@ -53,16 +69,13 @@ img#getImage {
     border-width: 1px;
     border-color: black;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 5px;
 
-    margin: 20px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
 
 }
 
-button {
-    background-color: rgb(223, 223, 240);
-}
 
 /* Style The Dropdown Button */
 .dropbtn {
@@ -70,7 +83,12 @@ button {
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
     cursor: pointer;
   }
 
@@ -109,12 +127,9 @@ button {
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e6a8e;
+    background-color: rgb(84, 84, 202);
   }
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e6e8e;
-}
 
 #Graph1{
   height: 50%;
