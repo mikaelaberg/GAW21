@@ -1,35 +1,41 @@
-var subjectObject = {
-    "Front-end": {
-      "HTML": ["Links", "Images", "Tables", "Lists"],
-      "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-      "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
-    },
-    "Back-end": {
-      "PHP": ["Variables", "Strings", "Arrays"],
-      "SQL": ["SELECT", "UPDATE", "DELETE"]
-    }
+/* REFERENCE CODE FROM: https://github.com/GVSU-Computing-Club/2020WebCrashCourse/blob/master/main.js
+  let postHeaders = document.querySelectorAll(".blogPost h2");
+  console.log(postHeaders);
+  // for(let i = 0; i < postHeaders.length; i++) {
+  //     postHeaders[i].innerHTML = "Potatos";
+  // }
+  postHeaders.forEach((element) => {
+      element.innerHTML = "Potatos";
+  })
+
+  let potatoURL = "https://upload.wikimedia.org/wikipedia/commons/9/93/BakedPotatoWithButter.jpg";
+  let images = document.getElementsByTagName("img");
+  for(let i = 0; i < images.length; i++) {
+      images[i].src = potatoURL;
+
+      images[i].id = "potato";
   }
-  window.onload = function() {
-    var subjectSel = document.getElementById("subject");
-    for (var x in subjectObject) {
-      subjectSel.options[subjectSel.options.length] = new Option(x, x);
-    }
-    subjectSel.onchange = function() {
-      //empty Chapters- and Topics- dropdowns
-      chapterSel.length = 1;
-      topicSel.length = 1;
-      //display correct values
-      for (var y in subjectObject[this.value]) {
-        topicSel.options[topicSel.options.length] = new Option(y, y);
-      }
-    }
-    topicSel.onchange = function() {
-      //empty Chapters dropdown
-      chapterSel.length = 1;
-      //display correct values
-      var z = subjectObject[subjectSel.value][this.value];
-      for (var i = 0; i < z.length; i++) {
-        chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
-      }
-    }
+
+}
+*/
+/*Translated the above to this but I don't think it works:)
+function changeGraph(){
+  let postHeaders = document.querySelectorAll(".dropdown-content");
+  console.log(postHeaders);
+  for(let i = 0; i < postHeaders.length; i++) {
+      postHeaders[i].innerHTML = "Graph";
   }
+  postHeaders.forEach((element) => {
+      element.innerHTML = "Graph";
+  })
+
+  let graphURL = "https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png";
+  let images = document.getElementsByTagName("img");
+  for(let i = 0; i < images.length; i++) {
+      images[1].src = graphURL;
+
+      images[1].id = "Graph";
+    }
+
+} */
+

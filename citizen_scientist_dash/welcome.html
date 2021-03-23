@@ -13,58 +13,52 @@
         <script src="main.js"> </script>
         <meta charshet="UTF-8">
 
-
-        <style>
-
-            </style>
-            
     </head>
 
     <body>
-        <img id= "GVLogo" src="https://grballet.com/wp-content/uploads/gvsu-logo.png"  alt="Grand Valley Logo">
-        <h1 id="logo">GVSU Muskegon Lake Citzen Scientist Dashboard</h1>
-        <form action="https://www.gvsu.edu/wri/buoy/data-index.htm" method="get" target="_blank">
-            <button type="submit"> Data Grapher </button>
-        <form action="https://www.gvsu.edu/wri/buoy/data-current.htm" method="get" target="_blank">
-            <button type="submit"> Current Conditions </button>
-        <form action="https://www.gvsu.edu/wri/buoy/data-api.htm" method="get" target="_blank">
-            <button type="submit"> API </button>
-        <form action="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm" method="get" target="_blank">
-            <button type="submit"> Disclaimer </button>
-        <div class="SquareBins">
-            This is a text enclosed in a box
+        <div>
+            <img
+                id= "GVLogo"
+                src="https://grballet.com/wp-content/uploads/gvsu-logo.png"
+                alt="Grand Valley Logo"> </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Select Your Graph</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <img
+                                id="Graph"
+                                src="https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png"
+                                alt="Graph1"></img>
+                            <div></div>
+                            <img
+                                id="Graph"
+                                src="https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png"
+                                alt="Graph2"></img>
+                            <div></div>
+                            <img
+                                id="Graph"
+                                src="https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png"
+                                alt="Graph3"></img>
+                        </div>
+                </div>
 
-        </div>
-
-
-        <div class="WaterColumn">
-            Water Column
-        </div>
-        <div class="DOColumn">
-            DO Column
-        </div>
-
-        <form name="form1" id="form1" action="/action_page.php">
-            <select name="subject" id="subject">
-              <option value="" selected="selected">Select Graph
-              </option>
-            </select>
-            <br><br>
-          </form>
-
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+            <div>
+                <form action="https://www.gvsu.edu/wri/buoy/data-index.htm" method="get" target="_blank">
+                    <button type="submit"> Data Grapher </button>
+                <form action="https://www.gvsu.edu/wri/buoy/data-current.htm" method="get" target="_blank">
+                    <button type="submit"> Current Conditions </button>
+                <form action="https://www.gvsu.edu/wri/buoy/data-api.htm" method="get" target="_blank">
+                    <button type="submit"> API </button>
+                <form action="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm" method="get" target="_blank">
+                    <button type="submit"> Disclaimer </button>
             </div>
-          </div>
+
+            <div class="SquareBins"> This is a text enclosed in a box </div>
+
+            <div class="WaterColumn"> Water Column </div>
+
+            <div class="DOColumn"> DO Column </div>
 
     </body>
 
-    <script>
-
-    </script>
-
 </html>
+
