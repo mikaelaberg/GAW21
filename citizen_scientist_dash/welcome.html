@@ -16,32 +16,14 @@
     </head>
 
     <body>
-        <div>
+        <div class="Mian Logo"> </div>
             <img
                 id= "GVLogo"
                 src="https://grballet.com/wp-content/uploads/gvsu-logo.png"
-                alt="Grand Valley Logo"> </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Select Your Graph</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <img
-                                id="Graph"
-                                src="https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png"
-                                alt="Graph1"></img>
-                            <div></div>
-                            <img
-                                id="Graph"
-                                src="https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png"
-                                alt="Graph2"></img>
-                            <div></div>
-                            <img
-                                id="Graph"
-                                src="https://github.com/mikaelaberg/GAW21/blob/main/citizen_scientist_dash/images/Main%20Page.png"
-                                alt="Graph3"></img>
-                        </div>
-                </div>
-
-            <div class= "AWRI Link Button Bar">
+                alt="Grand Valley Logo">
+        </div>
+        <div class="NavBar">
+            <div class= "AWRILinks">
                 <a href="https://www.gvsu.edu/wri/buoy/data-index.htm"  target="_blank">
                 Data Grapher</a>
                 <a href="https://www.gvsu.edu/wri/buoy/data-current.htm"  target="_blank">
@@ -50,13 +32,62 @@
                 API</a>
                 <a href="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm"  target="_blank">
                 Disclaimer</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Select Your Graph</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <img
+                        style = "display:none;"
+                        id="GraphMain"
+                        src="GraphMain">
+                    <button onclick="changeGraph('https://cdn-skill.splashmath.com/panel-uploads/GlossaryTerm/0053540d59ee4824b70187bce47ef0e4/1551236725_Drawing-a-bar-graph-to-represent-the-data.png')"> Graph Main </button>
+                    <div></div>
+                    <img
+                        style = "display:none;"
+                        id="Graph1"
+                        src="Graph1">
+                    <button onclick="changeGraph('https://png.pngtree.com/png-vector/20190307/ourmid/pngtree-vector-element-of-business-data-graph-analytic-png-image_779759.jpg')"> Graph1 </button>
+                    <div></div>
+                    <img
+                        style = "display:none;"
+                        id="Graph2"
+                        src="Graph2">
+                    <button onclick="changeGraph('https://png.pngtree.com/png-vector/20190307/ourmid/pngtree-vector-element-of-business-data-graph-analytic-png-image_779763.jpg')"> Graph2 </button>
+                    <div></div>
+                    <img
+                        style = "display:none;"
+                        id="Graph3"
+                        src="Graph3">
+                    <button onclick="changeGraph('https://www.researchgate.net/profile/Yanina-Benedetti/publication/320624311/figure/fig1/AS:614274296725510@1523465813175/Bar-chart-of-area-of-HNVf-ha-represented-as-a-percentage-of-the-number-of-peer-reviewed.png')"> Graph3 </button>
+                    </div>
             </div>
 
-            <div class="SquareBins"> This is a text enclosed in a box </div>
+        </div>
 
-            <div class="WaterColumn"> Water Column </div>
+        <div class= "MainPage">
 
-            <div class="DOColumn"> DO Column </div>
+            <div class="GraphBin">
+                    <img src="https://cdn-skill.splashmath.com/panel-uploads/GlossaryTerm/0053540d59ee4824b70187bce47ef0e4/1551236725_Drawing-a-bar-graph-to-represent-the-data.png"
+                    alt="GraphBase"
+                    id = "GraphBase"
+                    height = "500"
+                    width = "500">
+            </div>
+
+            <div class="NonGraphData">
+                <div class="WindSpeed"> Wind Speed Data </div>
+                <div class="WaterColumn"> Water Column </div>
+                <div class="DOColumn"> DO Column </div>
+                <div class="AirData"> Air Data </div>
+                <div class="ChlroData"> Chlorophill-a Data </div>
+                <div class="PhycoData"> Phycocyanin Data </div>
+            </div>
+
+        </div>
+
+        <div class="Footer">
+
+        </div>
 
     </body>
 

@@ -3,6 +3,13 @@ html {
     background-color: rgb(236, 236, 236);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/*Nav Bar Content*/
+
+/*AWRI Link Buttons*/
 a:link, a:visited {
   background-color: #3f4fac;
   color: white;
@@ -18,7 +25,7 @@ a:link, a:visited {
 
   cursor: pointer;
 }
-
+/*AWRI Link Buttons*/
 a:hover, a:active {
   background-color: rgb(84, 84, 202);
 
@@ -27,57 +34,7 @@ a:hover, a:active {
   border-style: solid;
   border-radius: 5px;
 }
-
-.SquareBins {
-    height: 300px;
-    width: 322px;
-    font-size: 16px;
-    background-color: white;
-
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-
-    margin: 5px;
-    padding: 5px;
-}
-
-.WaterColumn {
-    float: left;
-    height: 600px;
-    width: 150px;
-    font-size: 16px;
-    background-color: white;
-
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-
-    margin: 5px;
-    padding: 5px;
-
-}
-.DOColumn {
-    float: left;
-    height: 600px;
-    width: 150px;
-    font-size: 16px;
-    background-color: white;
-
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 5px;
-
-    margin: 5px;
-    padding: 5px;
-
-}
-
-
-/* Style The Dropdown Button */
+/* Style The Dropdown Button For Graph*/
 .dropbtn {
     background-color: #4c5baf;
     color: white;
@@ -92,10 +49,37 @@ a:hover, a:active {
     cursor: pointer;
   }
 
+  .btn {
+    background-color: #4c5baf;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+  }
+
+button{
+  background-color:#4c5baf; /* Green */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
   /* The container <div> - needed to position the dropdown content */
 .dropdown {
     float: right;
-    position: relative;
     display: inline-block;
   }
   /* Dropdown Content (Hidden by Default) */
@@ -112,7 +96,7 @@ a:hover, a:active {
 
   /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: rgba(0, 0, 0, 0);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -130,17 +114,161 @@ a:hover, a:active {
     background-color: rgb(84, 84, 202);
   }
 
+/*Main Page Content*/
 
-#Graph1{
-  height: 50%;
-  width: 50%;
-}
-#Graph2{
-  height: 50%;
-  width: 50%;
-}
-#Graph3{
-  height: 50%;
-  width: 50%;
+/*
+.GraphBin {
+  float: right;
+  background-color: #ffffff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}*/
+
+
+.NavBar{
+  background-color: #343f7a;
+  border: 1px rgba(0, 0, 0, 0.555);
+  padding: 15px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
 }
 
+.MainPage{
+  width: 100%;
+  float: left; /*Not sure what I can use in replace of this*/
+}
+
+.GraphBin {
+  float: right;
+  width: 65%;
+
+  background-color: white;
+  padding: 16px;
+  font-size: 16px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.NonGraphData{
+  float: left;
+  width: 35%;
+  background-color: white;
+  padding: 16px;
+  font-size: 16px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.WindSpeed {
+  float: left;
+  height: 25%;
+  width: 50%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.WaterColumn {
+  float: left;
+  height: 75%;
+  width: 50%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+
+}
+
+/*
+.DOColumn {
+  float: left;
+  height: 600px;
+  width: 150px;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+*/
+/*
+.AirData {
+  height: 300px;
+  width: 322px;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+*/
+/*
+.ChlroData{
+  height: 300px;
+  width: 322px;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+*/
+/*
+.PhycoData {
+  height: 300px;
+  width: 322px;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+*/
