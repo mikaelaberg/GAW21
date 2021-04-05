@@ -5,7 +5,7 @@ function changeGraph(graphSource){
     imgagecontainer.width = "500";
     document.getElementById("GraphBase").innerHtml = imgagecontainer;
 }
-const json = (() => {
+const json = (() => {    //this breaks the data rn
         var json = null;
         $.ajax({
             'async': false,
@@ -19,7 +19,9 @@ const json = (() => {
         return json;
 })();
 
-console.log(json.AirTemp)
+// console.log(json.AirTemp)
 
-document.querySelector('.testData').textContent = "test"
+
+
+document.querySelector('.testData').textContent = json.AirTemp
 
