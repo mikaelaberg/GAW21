@@ -5,35 +5,7 @@ function changeGraph(graphSource){
     imgagecontainer.width = "500";
     document.getElementById("GraphBase").innerHtml = imgagecontainer;
 }
-const json = (() => {    //this breaks the data rn
-        var json = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': "./testdata.json", //Json file location
-            'dataType': "json",
-            'success': function(data) {
-            json = data;
-        }
-        });
-        return json;
-})();
 
-// console.log(json.AirTemp)
-
-fetch('testdata.json')
-    .then(function (response) {
-    // The JSON data will arrive here
-    return response.json();
-    })
-    .then(function (data) {
-    // The JSON data will arrive here
-    appendData(data);
-    })
-    .catch(function (err) {
-    // If an error occured, you will catch it here
-    console.log(err);
-    });
 
 
 function appendData(data) {
@@ -65,7 +37,7 @@ function appendData(data) {
 // xmlhttp.send("x=" + dbParam);
 
 
-
+document.querySelector('.testData').textContent = json.AirTemp
 
 
 // https://www.encodedna.com/javascript/populate-json-data-to-html-table-using-javascript.htm
@@ -131,3 +103,39 @@ function CreateTableFromJSON() {
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
 }
+
+
+$(function(){
+    var partsList = [];
+    $.getJSON('testData.json', function(data){
+        $.each(json.properties, function(i, f) {
+        var tblRow = "<tr>"
+                + "<td>" + f.DateTime + "</td>"
+                + "<td>" + f.AirTemp + "</td>"
+                + "<td>" + f.RelativeHumidity + "</td>"
+                + "<td>" + f.RelativeBarometricPressure + "</td>"
+                + "<td>" + f.WindSpeed + "</td>"
+                + "<td>" + f.WindGust + "</td>"
+                + "<td>" + f.WindDirection + "</td>"
+                + "<td>" + f.RainCumulative + "</td>"
+                + "<td>" + f.RainCurrently + "</td>"
+                + "<td>" + f.WaterTemp2m + "</td>"
+                + "<td>" + f.WaterTemp4m + "</td>"
+                + "<td>" + f.WaterTemp7m + "</td>"
+                + "<td>" + f.WaterTemp9m + "</td>"
+                + "<td>" + f.WaterTemp11m + "</td>"
+                + "<td>" + f.Chlorophyll2m + "</td>"
+                + "<td>" + f.Phycocyanin2m + "</td>"
+                + "<td>" + f.DissolvedOxygenSaturation2m + "</td>"
+                + "<td>" + f.DissolvedOxygenSaturation5m + "</td>"
+                + "<td>" + f.DissolvedOxygenSaturation8m + "</td>"
+                + "<td>" + f.DissolvedOxygenSaturation11m + "</td>"
+                + "<td>" + f.DissolvedOxygen2m + "</td>"
+                + "<td>" + f.DissolvedOxygen5m + "</td>"
+                + "<td>" + f.DissolvedOxygen8m + "</td>"
+                + "<td>" + f.DissolvedOxygen11m + "</td>"
+                + "</tr>";
+        $(tblRow).appendTo("#partsListData tbody");
+    });
+});
+    });
