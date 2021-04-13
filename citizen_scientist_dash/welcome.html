@@ -76,51 +76,40 @@
             </div>
 
             <div class="NonGraphData">
-                <div class="WindSpeed"> Wind Speed Data </div>
-                <div class="WaterColumn"> Water Column </div>
-                <div class="DOColumn"> DO Column </div>
-                <div class="AirData"> Air Data </div>
-                <div class="ChlroData"> Chlorophill-a Data </div>
-                <div class="PhycoData"> Phycocyanin Data </div>
+                <div class="WindSpeed"> Wind Speed Data
+                    <div id="windspeed"> test1 </div>  
+                    <div id="winddirection"> test1 </div>    
+                </div>
+                <div class="WaterColumn"> Water Column 
+                    <div id="watertemp2m"> 2 meters </div>
+                    <div id="watertemp4m"> 4 meters </div>
+                    <div id="watertemp7m"> 7 meters </div>
+                    <div id="watertemp9m"> 9 meters </div>
+                    <div id="watertemp11m"> 11 meters </div>
+                </div>
+                <div class="DOColumn"> DO Column 
+                    <div id="dissolvedoxygen2m"> 2 meters </div>
+                    <div id="dissolvedoxygen5m"> 5 meters </div>
+                    <div id="dissolvedoxygen8m"> 8 meters </div>
+                    <div id="dissolvedoxygen11m"> 11 meters </div>
+
+                </div>
+                <div class="AirData"> Air Data 
+                    <div id="airtemp"> test1 </div>
+                    <div id="relativebarometricpressure"> test1 </div>
+                    <div id="relativehumidity"> test1 </div>
+                    <div id="raincurrently"> test1 </div>
+                </div>
+                <div class="ChlroData"> Chlorophill-a Data 
+                    <div id="chlorophyll"> test1 </div>
+                </div>
+                <div class="PhycoData"> Phycocyanin Data 
+                    <div id="phycocyanin"> test1 </div>
+                </div>
             </div>
 
-            <div class="testData"> test1 </div>
+           
 
-            <div id="myData"></div>
-
-            <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
-            <p id="showData"></p>
-
-        <section>
-            <table id="partsListData" border="1">
-                <thead>
-                    <th>DateTime</th>
-                    <th>AirTemp</th>
-                    <th>RelativeHumidity</th>
-                    <th>RelativeBarometricPressure</th>
-                    <th>WindSpeed</th>
-                    <th>WindGust</th>
-                    <th>WindDirection</th>
-                    <th>RainCumulative</th>
-                    <th>RainCurrently</th>
-                    <th>WaterTemp2m</th>
-                    <th>WaterTemp4m</th>
-                    <th>WaterTemp7m</th>
-                    <th>WaterTemp9m</th>
-                    <th>WaterTemp11m</th>
-                    <th>Chlorophyll2m</th>
-                    <th>Phycocyanin2m</th>
-                    <th>DissolvedOxygenSaturation2m</th>
-                    <th>DissolvedOxygenSaturation5m</th>
-                    <th>DissolvedOxygenSaturation8m</th>
-                    <th>DissolvedOxygenSaturation11m</th>
-                    <th>DissolvedOxygen2m</th>
-                    <th>DissolvedOxygen5m</th>
-                    <th>DissolvedOxygen8m</th>
-                    <th>DissolvedOxygen11m</th>
-                </thead>
-            </table>
-        </section>
 
         </div>
 

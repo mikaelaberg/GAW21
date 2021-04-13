@@ -1,5 +1,4 @@
-[
-    {
+{
         "DateTime": "Tuesday, October 27 2020 at 12:15",
         "AirTemp": "37.22 °F",
         "RelativeHumidity": "93 %",
@@ -24,32 +23,5 @@
         "DissolvedOxygen5m": "9.53,mg/L",
         "DissolvedOxygen8m": "9.51,mg/L",
         "DissolvedOxygen11m": "8.47,mg/L"
-    },
-    {
-        "DateTime": "Tuesday, October 28 2020 at 12:15",
-        "AirTemp": "37.22 °F",
-        "RelativeHumidity": "93 %",
-        "RelativeBarometricPressure": "30.36 Hg",
-        "WindSpeed": "1.7 knots",
-        "WindGust": "3.3 knots",
-        "WindDirection": "185 degrees",
-        "RainCumulative": "402.8 inches",
-        "RainCurrently": "0 inches",
-        "WaterTemp2m": "0 °F",
-        "WaterTemp4m": "0 °F",
-        "WaterTemp7m": "0 °F",
-        "WaterTemp9m": "0 °F",
-        "WaterTemp11m": "0 °F",
-        "Chlorophyll2m": "2.2 µg/L",
-        "Phycocyanin2m": "847 Cells/mL",
-        "DissolvedOxygenSaturation2m": "87.7 %",
-        "DissolvedOxygenSaturation5m": "84.5 %",
-        "DissolvedOxygenSaturation8m": "83.8 %",
-        "DissolvedOxygenSaturation11m": "74.7 %",
-        "DissolvedOxygen2m": "9.85,mg/L",
-        "DissolvedOxygen5m": "9.53,mg/L",
-        "DissolvedOxygen8m": "9.51,mg/L",
-        "DissolvedOxygen11m": "8.47,mg/L"
-    }
-]
+}
 
