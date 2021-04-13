@@ -7,8 +7,23 @@ html {
   box-sizing: border-box;
 }
 
+.Header{
+  background-color: #f1f1f1;
+
+}
+
 /*Nav Bar Content*/
 
+.NavBar{
+  background-color: #343f7a;
+  border: 1px rgba(0, 0, 0, 0.555);
+  padding: 15px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
 /*AWRI Link Buttons*/
 a:link, a:visited {
   background-color: #3f4fac;
@@ -117,16 +132,6 @@ button{
 /*Main Page Content*/
 
 
-.NavBar{
-  background-color: #343f7a;
-  border: 1px rgba(0, 0, 0, 0.555);
-  padding: 15px;
-
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  border-radius: 5px;
-}
 
 .MainPage{
   width: 100%;
