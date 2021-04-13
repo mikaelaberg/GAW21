@@ -150,6 +150,7 @@ button{
 .GraphBin {
   float: right;
   width: 65%;
+  height: 100%;
 
   background-color: white;
   padding: 16px;
@@ -163,6 +164,7 @@ button{
 
 .NonGraphData{
   float: left;
+  height: 100%;
   width: 35%;
   background-color: white;
   padding: 16px;
@@ -209,7 +211,7 @@ button{
 
 
 .DOColumn {
-  float: right;
+  float: left;
   height: 75%;
   width: 45%;
   font-size: 16px;
@@ -246,7 +248,7 @@ button{
   float: right;
   height: 25%;
   width: 45%;
-  font-size: 16px;
+  font-size: 100%;
   background-color: white;
 
   border-width: 1px;
