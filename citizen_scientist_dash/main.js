@@ -50,7 +50,7 @@ document.getElementById("watertemp2m").innerHTML = json.WaterTemp2m;
 document.getElementById("chlorophyll").innerHTML = json.Chlorophyll2m;
 document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
 
-
+document.getElementById("Time").innerHTML = json.DateTime;
 
 // document.querySelector('.testData').textContent = json.AirTemp;
 
