@@ -53,4 +53,14 @@ document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
 document.getElementById("Time").innerHTML = json.DateTime;
 
 // document.querySelector('.testData').textContent = json.AirTemp;
-
+$(function() {
+    $('.gauge-wrap').simpleGauge({
+        width:'200',
+        hueLow:'1',
+        hueHigh:'128',
+        saturation:'100%',
+        lightness:'50%',
+        gaugeBG:'#1b1b1f',
+        parentBG:'#323138'
+        });
+});
