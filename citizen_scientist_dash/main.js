@@ -43,10 +43,9 @@ document.getElementById("airtemp").innerHTML = json.AirTemp;
 document.getElementById("relativehumidity").innerHTML = json.RelativeHumidity;
 document.getElementById("relativebarometricpressure").innerHTML = json.RelativeBarometricPressure;
 document.getElementById("raincurrently").innerHTML = json.RainCurrently;
-document.getElementById("windspeed").innerHTML = json.WindGust;
+document.getElementById("windspeed").innerHTML = json.AirTemp;
 document.getElementById("watertemp2m").innerHTML = json.WaterTemp2m;
-document.getElementById("chlorophyll").innerHTML = json.Chlorophyll2m;
-document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
+
 
 document.getElementById("Time").innerHTML = json.DateTime;
 
@@ -80,3 +79,8 @@ function setGaugeValue(gauge, value) {
 }
 
 setGaugeValue(gaugeElement, 0.3);
+
+document.getElementById("chlorophyll").innerHTML = json.Chlorophyll2m;
+document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
+
+
