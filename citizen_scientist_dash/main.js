@@ -1,8 +1,6 @@
 function changeGraph(graphSource){
     var imgagecontainer = document.getElementById("GraphBase");
     imgagecontainer.src = graphSource;
-    imgagecontainer.height = "500";
-    imgagecontainer.width = "500";
     document.getElementById("GraphBase").innerHtml = imgagecontainer;
 }
 
