@@ -11,6 +11,8 @@
 
 [CSS Website Layout Try It Out](https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_blog)
 
-## Personal 
-[Matts Tutoral GVSU Computing Club Making a Website](https://github.com/GVSU-Computing-Club/2020WebCrashCourse/tree/master)
+
+
+## JQuery Gauge Options for the Future:
+[J Query Gauge](https://www.jqueryscript.net/plus/search.php?kwtype=0&keyword=gauge)
 
