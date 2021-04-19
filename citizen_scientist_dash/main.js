@@ -43,7 +43,7 @@ document.getElementById("airtemp").innerHTML = json.AirTemp;
 document.getElementById("relativehumidity").innerHTML = json.RelativeHumidity;
 document.getElementById("relativebarometricpressure").innerHTML = json.RelativeBarometricPressure;
 document.getElementById("raincurrently").innerHTML = json.RainCurrently;
-document.getElementById("windspeed").innerHTML = json.AirTemp;
+document.getElementById("windspeed").innerHTML = json.WindGust;
 document.getElementById("watertemp2m").innerHTML = json.WaterTemp2m;
 document.getElementById("chlorophyll").innerHTML = json.Chlorophyll2m;
 document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
@@ -51,7 +51,7 @@ document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
 document.getElementById("Time").innerHTML = json.DateTime;
 
 // document.querySelector('.testData').textContent = json.AirTemp;
-$(function() {
+$(document).ready(function(){
     $('.gauge-wrap').simpleGauge({
         width:'200',
         hueLow:'1',
@@ -62,3 +62,21 @@ $(function() {
         parentBG:'#323138'
         });
 });
+
+
+const gaugeElement = document.querySelector(".gauge");
+
+function setGaugeValue(gauge, value) {
+  if (value < 0 || value > 1) {
+    return;
+  }
+
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
+  gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+    value * 100
+  )}%`;
+}
+
+setGaugeValue(gaugeElement, 0.3);
