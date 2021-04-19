@@ -65,22 +65,24 @@ $(document).ready(function(){
 
 const gaugeElement = document.querySelector(".gauge");
 
-function setGaugeValue(gauge, value) {
-  if (value < 0 || value > 1) {
-    return;
-  }
+function setGauge1Value(gauge, value) {
 
   gauge.querySelector(".gauge__fill").style.transform = `rotate(${
     value / 2
   }turn)`;
-  gauge.querySelector(".gauge__cover").textContent = `${Math.round(
-    value * 100
-  )}%`;
+  gauge.querySelector(".gauge__cover").textContent = `${(json.Chlorophyll2m)
+  }`;
 }
-
-setGaugeValue(gaugeElement, 0.3);
-
-document.getElementById("chlorophyll").innerHTML = json.Chlorophyll2m;
-document.getElementById("phycocyanin").innerHTML = json.Phycocyanin2m;
+setGauge1Value(gaugeElement, json.Chlorophyll2m);
 
 
+const gaugeElement2 = document.querySelector(".gauge2");
+function setGauge2Value(gauge2, value) {
+    gauge.querySelector(".gauge__fill2").style.transform = `rotate(${
+      value / 2
+    }turn)`;
+    gauge.querySelector(".gauge__cover2").textContent = `${(json.Phycocyanin2m)
+    }`;
+  }
+
+setGauge2Value(gaugeElement2,json.Phycocyanin2m);
