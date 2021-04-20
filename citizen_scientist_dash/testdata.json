@@ -8,7 +8,7 @@
         "WindDirection": "185 degrees",
         "RainCumulative": "402.8 inches",
         "RainCurrently": "0 inches",
-        "WaterTemp2m": "0 °F",
+        "WaterTemp2m": 0,
         "WaterTemp4m": "0 °F",
         "WaterTemp7m": "0 °F",
         "WaterTemp9m": "0 °F",
