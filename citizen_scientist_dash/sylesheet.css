@@ -262,6 +262,8 @@ button{
   border-radius: 5px;
 }
 
+
+
 .WindSpeed {
   float: left;
   height: 75%;
@@ -408,7 +410,10 @@ button{
 }
 
 
-/*https://www.youtube.com/watch?v=FnUkVcQ_3CQ*/
+/*From the following Links:
+https://www.youtube.com/watch?v=FnUkVcQ_3CQ
+https://codepen.io/dcode-software/pen/zYGVXyX
+*/
 
 .gauge1 {
   width: 100%;
@@ -452,6 +457,7 @@ button{
   transform: translateX(-50%);
 
   /* Text */
+  font-size: 80%;
   display: flex;
   align-items: center;
   justify-content: center;

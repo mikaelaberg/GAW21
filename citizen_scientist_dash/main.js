@@ -71,7 +71,7 @@ function setGauge1Value(gauge, value) {
     value / 2
   }turn)`;
   gauge.querySelector(".gauge__cover1").textContent = `${(json.Chlorophyll2m)
-  }`;
+  }µg/L`;
 }
 setGauge1Value(gaugeElement1, json.Chlorophyll2m);
 
@@ -79,10 +79,10 @@ setGauge1Value(gaugeElement1, json.Chlorophyll2m);
 const gaugeElement2 = document.querySelector(".gauge2");
 function setGauge2Value(gauge, value) {
     gauge.querySelector(".gauge__fill2").style.transform = `rotate(${
-      value / 2
+      value / 6
     }turn)`;
-    gauge.querySelector(".gauge__cover2").textContent = `${(json.Phycocyanin2m)
-    }`;
+    gauge.querySelector(".gauge__cover2").textContent = `${(json.Phycocyanin2m) 
+    }Cells/mL`;
   }
 
 setGauge2Value(gaugeElement2,json.Phycocyanin2m);
