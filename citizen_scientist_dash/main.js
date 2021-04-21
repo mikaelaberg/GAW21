@@ -28,26 +28,34 @@ const json = (() => {
     return json;
 })();
 
-document.getElementById("windspeed").innerHTML = json.WindSpeed;
-document.getElementById("winddirection").innerHTML = json.WindDirection;
-document.getElementById("watertemp2m").innerHTML = json.WaterTemp2m;
-document.getElementById("watertemp4m").innerHTML = json.WaterTemp4m;
-document.getElementById("watertemp7m").innerHTML = json.WaterTemp7m;
-document.getElementById("watertemp9m").innerHTML = json.WaterTemp9m;
-document.getElementById("watertemp11m").innerHTML = json.WaterTemp11m;
-document.getElementById("dissolvedoxygen2m").innerHTML = json.DissolvedOxygen2m;
-document.getElementById("dissolvedoxygen5m").innerHTML = json.DissolvedOxygen5m;
-document.getElementById("dissolvedoxygen8m").innerHTML = json.DissolvedOxygen8m;
-document.getElementById("dissolvedoxygen11m").innerHTML = json.DissolvedOxygen11m;
-document.getElementById("airtemp").innerHTML = json.AirTemp;
-document.getElementById("relativehumidity").innerHTML = json.RelativeHumidity;
-document.getElementById("relativebarometricpressure").innerHTML = json.RelativeBarometricPressure;
-document.getElementById("raincurrently").innerHTML = json.RainCurrently;
-document.getElementById("windspeed").innerHTML = json.AirTemp;
-document.getElementById("watertemp2m").innerHTML = json.WaterTemp2m;
 
+document.getElementById("windspeed").textContent = `${(json.WindSpeed)} knots`;
+document.getElementById("winddirection").textContent = `${(json.WindDirection)} degrees`;
+
+
+document.getElementById("airtemp").textContent = `${(json.AirTemp)} °F`;
+document.getElementById("relativehumidity").textContent = `${(json.RelativeHumidity)}%`;
+document.getElementById("relativebarometricpressure").textContent = `${(json.RelativeBarometricPressure)} Hg`;
+document.getElementById("raincurrently").textContent = `${(json.RainCurrently)} inches`;
+
+
+document.getElementById("watertemp2m").textContent = `${(json.WaterTemp2m)} °F 2 meters`;
+document.getElementById("watertemp4m").textContent = `${(json.WaterTemp4m)} °F 4 meters`;
+document.getElementById("watertemp7m").textContent = `${(json.WaterTemp7m)} °F 7 meters`;
+document.getElementById("watertemp9m").textContent = `${(json.WaterTemp9m)} °F 9 meters`;
+document.getElementById("watertemp11m").textContent = `${(json.WaterTemp11m)} °F 11 meters`;
+
+document.getElementById("dissolvedoxygen2m").textContent = `${(json.DissolvedOxygen2m)} mg/L 2 meters`;
+document.getElementById("dissolvedoxygen5m").textContent = `${(json.DissolvedOxygen5m)} mg/L 5 meters`;
+document.getElementById("dissolvedoxygen8m").textContent = `${(json.DissolvedOxygen8m)} mg/L 8 meters`;
+document.getElementById("dissolvedoxygen11m").textContent = `${(json.DissolvedOxygen11m)} mg/L 11 meters`;
 
 document.getElementById("Time").innerHTML = json.DateTime;
+
+
+
+
+
 
 // document.querySelector('.testData').textContent = json.AirTemp;
 $(document).ready(function(){
@@ -68,7 +76,7 @@ const gaugeElement1 = document.querySelector(".gauge1");
 function setGauge1Value(gauge, value) {
 
   gauge.querySelector(".gauge__fill1").style.transform = `rotate(${
-    value / 2
+    value / -2 /*trial and error figured out that negative numbers flipped the bar to be what I needed for this */
   }turn)`;
   gauge.querySelector(".gauge__cover1").textContent = `${(json.Chlorophyll2m)
   }µg/L`;
@@ -79,9 +87,9 @@ setGauge1Value(gaugeElement1, json.Chlorophyll2m);
 const gaugeElement2 = document.querySelector(".gauge2");
 function setGauge2Value(gauge, value) {
     gauge.querySelector(".gauge__fill2").style.transform = `rotate(${
-      value / 6
+      value / -23 /*trial and error number */
     }turn)`;
-    gauge.querySelector(".gauge__cover2").textContent = `${(json.Phycocyanin2m) 
+    gauge.querySelector(".gauge__cover2").textContent = `${(json.Phycocyanin2m)
     }Cells/mL`;
   }
 

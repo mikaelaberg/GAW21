@@ -496,7 +496,7 @@ https://codepen.io/dcode-software/pen/zYGVXyX
   left: 0;
   width: inherit;
   height: 100%;
-  background: #343f7a;
+  background: #343f7a ;
   transform-origin: center top;
   transform: rotate(0.25turn);
   transition: transform 0.2s ease-out;
