@@ -167,7 +167,7 @@ function draw() {
 	// Save the current drawing state
 	ctx.save();
 
-	// Now move across and down half the 
+	// Now move across and down half the
 	ctx.translate(100, 100);
 
 	// Rotate around this point

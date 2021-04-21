@@ -9,26 +9,15 @@
 				gtag('js', new Date());
 				gtag('config', 'UA-121811-10');
 				</script>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
-
-
         <title> GVSU Muskegon Lake Citzen Scientist Dashboard </title>
         <link rel="stylesheet" href="sylesheet.css">
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <meta charshet="UTF-8">
-
     </head>
-
     <body>
         <div class="Header"> </div>
-            <img
-                id= "GVLogo"
-                src=""
-                alt="Grand Valley Logo">
+            <div class="Title">Muskegon Lake Citizen Scientist Main Page </div>
         </div>
         <div class="NavBar">
             <div class= "AWRILinks">
@@ -40,7 +29,6 @@
                 API</a>
                 <a href="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm"  target="_blank">
                 Disclaimer</a>
-
             <div class="dropdown">
                 <button class="dropbtn">Select Your Graph</button>
                     <div id="myDropdown" class="dropdown-content">
@@ -58,9 +46,7 @@
                     <div></div>
                     </div>
             </div>
-
         </div>
-
         <div class= "MainPage">
             <div class="GraphBin">
                     <img src="https://raw.githubusercontent.com/mikaelaberg/GAW21/main/citizen_scientist_dash/images/LakeBtmTpWtrAirTmp.png"
@@ -74,62 +60,56 @@
                             </div>
                         </div>
                         <button type="button">Download Data</button>
-                        <div class="GraphLegend"> Graph Legend
-
+                        <div class="GraphLegend"> Graph Legend:
                         </div>
                     </div>
             </div>
-
             <div class="NonGraphData">
-                <div class="RightSide">
+                <div class="Top">
                     <div class="AirData"> Air Data
                         <div id="airtemp"> test1 </div>
                         <div id="relativebarometricpressure"> test1 </div>
                         <div id="relativehumidity"> test1 </div>
                         <div id="raincurrently"> test1 </div>
                     </div>
-                    <div class="ChlroData"> Chlorophill-a Data
-
-                        <div class="gauge1">
-                        <div class="gauge__body1">
-                            <div class="gauge__fill1"></div>
-                            <div class="gauge__cover1"></div>
-                        </div>
-                        </div>
-
-                    </div>
-                    <div class="PhycoData"> Phycocyanin Data
-
-                        <div class="gauge2">
-                        <div class="gauge__body2">
-                            <div class="gauge__fill2"></div>
-                            <div class="gauge__cover2"></div>
-                        </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="LeftSide">
                     <div class="WindSpeed"> Wind Speed Data
                         <div id="windspeed"> test1 </div>
                         <div id="winddirection"> test1 </div>
-
                         <!-- Another compass from https://tripleodeon.com/2011/10/taking-a-new-device-api-for-a-spin/
                         for IOS but does come up on the screen statically
                         <title>compios5</title>
                         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
                         <meta name="apple-mobile-web-app-capable" content="yes" />
                         -->
-
-
                         <!-- From https://github.com/rheh/HTML5-canvas-projects/tree/master/compass
                         blog I found this on: https://geeksretreat.wordpress.com/2012/05/09/html-5-canvas-an-animated-compass/
                         -->
                         <body onload='init();'>
 		                    <canvas id="compass" width="200" height="200"></canvas>
                         </body>
-
                     </div>
+                </div>
+                <div></div>
+                <div class="RightSide">
+                    <div class="ChlroData"> Chlorophill-a Data
+                        <div class="gauge1">
+                        <div class="gauge__body1">
+                            <div class="gauge__fill1"></div>
+                            <div class="gauge__cover1"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="PhycoData"> Phycocyanin Data
+                        <div class="gauge2">
+                        <div class="gauge__body2">
+                            <div class="gauge__fill2"></div>
+                            <div class="gauge__cover2"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="LeftSide">
+                    <div class="filler"></div>
                     <div class="WaterColumn"> Water Column in °F
                         <div class="button-group-WaterTemp">
                             <button class="button">
@@ -166,15 +146,10 @@
                         </div>
                     </div>
                 </div>
-
                 </div>
             </div>
         </div>
-
-
-
         <script type="text/javascript" src="main.js"> </script>
     </body>
-
 </html>
 
