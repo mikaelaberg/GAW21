@@ -217,6 +217,3 @@ function init() {
 	}
 }
 
-
-// Windrose code:
-
