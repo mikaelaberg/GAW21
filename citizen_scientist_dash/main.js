@@ -218,3 +218,5 @@ function init() {
 }
 
 
+// Windrose code:
+
