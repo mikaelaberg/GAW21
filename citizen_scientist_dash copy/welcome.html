@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> GVSU Muskegon Lake Citzen Scientist Dashboard </title>
+        <meta charshet="UTF-8">
+
+        <link rel="stylesheet" href="sylesheet.css">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121811-10"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'UA-121811-10');
+				</script>
+
+    </head>
+
+    <body>
+        <div class="Header"> </div>
+            <div class="Title">Muskegon Lake Citizen Scientist Main Page </div>
+        </div>
+        <div class="NavBar">
+            <div class= "AWRILinks">
+                <a href="https://www.gvsu.edu/wri/buoy/data-index.htm"  target="_blank">
+                Data Grapher</a>
+                <a href="https://www.gvsu.edu/wri/buoy/data-current.htm"  target="_blank">
+                Current Conditions</a>
+                <a href="https://www.gvsu.edu/wri/buoy/data-api.htm"  target="_blank">
+                API</a>
+                <a href="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm"  target="_blank">
+                Disclaimer</a>
+                <a href="https://www.glerl.noaa.gov/res/recon/station-mkg.html"  target="_blank">
+                NOAA Muskegon Buoy</a>
+            <div class="dropdown">
+                <button class="dropbtn">Select Your Graph</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <img
+                        style = "display:none;"
+                        id="GraphMain"
+                        src="GraphMain">
+                    <button onclick="changeGraph('https://raw.githubusercontent.com/mikaelaberg/GAW21/main/citizen_scientist_dash/images/LakeBtmTpWtrAirTemp.png')"> Lake Bottom and Top Layer Tempature With Air Tempature </button>
+                    <div></div>
+                    <img
+                        style = "display:none;"
+                        id="Graph1"
+                        src="Graph1">
+                    <button onclick="changeGraph('https://raw.githubusercontent.com/mikaelaberg/GAW21/main/citizen_scientist_dash/images/LakeBtmTpDOWindSpd.png')"> Lake Bottom and Top Layer DO With Wind Speed </button>
+                    <div></div>
+                    <img
+                        style = "display:none;"
+                        id="Graph2"
+                        src="Graph2">
+                    <button onclick="changeGraph('https://raw.githubusercontent.com/mikaelaberg/GAW21/main/citizen_scientist_dash/images/ThermoclineDepth.png')"> Thermocline Depth </button>
+                    <div></div>
+                    </div>
+            </div>
+        </div>
+        <div class= "MainPage">
+            <div class="GraphBin">
+                    <img src="https://raw.githubusercontent.com/mikaelaberg/GAW21/main/citizen_scientist_dash/images/LakeBtmTpWtrAirTemp.png"
+                    alt="GraphBase"
+                    id = "GraphBase">
+                    <div class="GraphFooter">
+                        <div class="TimeSlider"> Time Slider
+                            <div id="Time"> Date Time </div>
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                            </div>
+                        </div>
+                        <button type="button">Download Data</button>
+                        <div class="GraphLegend"> Graph Legend:
+                        </div>
+                    </div>
+            </div>
+            <div class="NonGraphData">
+                <div class="Top">
+                    <div class="AirData"> Air Data
+                        <div id="airtemp"> test1 </div>
+                        <div id="relativebarometricpressure"> test1 </div>
+                        <div id="relativehumidity"> test1 </div>
+                        <div id="raincurrently"> test1 </div>
+                    </div>
+                    <div class="WindSpeed"> Wind Speed Data
+                        <div id="windspeed"> test1 </div>
+                        <div id="winddirection"> test1 </div>
+                        <!-- Another compass from https://tripleodeon.com/2011/10/taking-a-new-device-api-for-a-spin/
+                        for IOS but does come up on the screen statically
+                        <title>compios5</title>
+                        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+                        <meta name="apple-mobile-web-app-capable" content="yes" />
+                        -->
+                        <!-- From https://github.com/rheh/HTML5-canvas-projects/tree/master/compass
+                        blog I found this on: https://geeksretreat.wordpress.com/2012/05/09/html-5-canvas-an-animated-compass/
+                        -->
+                        <body onload='init();'>
+		                    <canvas id="compass" width="200" height="200"></canvas>
+                        </body>
+                    </div>
+
+                <div></div>
+                <div class="RightSide">
+                    <div class="ChlroData"> Chlorophill-a Data
+                        <div class="gauge1">
+                        <div class="gauge__body1">
+                            <div class="gauge__fill1"></div>
+                            <div class="gauge__cover1"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="PhycoData"> Phycocyanin Data
+                        <div class="gauge2">
+                        <div class="gauge__body2">
+                            <div class="gauge__fill2"></div>
+                            <div class="gauge__cover2"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="LeftSide">
+                    <div class="filler"></div>
+                    <div class="WaterColumn"> Water Column
+                        <div class="button-group-WaterTemp">
+                        <!-- color scheme https://www.schemecolor.com/orange-to-blue-gradient.php-->
+                            <button class="button" style="background-color:#0200C6">
+                                <div id="watertemp2m"> 2 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#412395">
+                                <div id="watertemp4m"> 4 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#814663">
+                                <div id="watertemp7m"> 7 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#C06832">
+                                <div id="watertemp9m"> 9 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#FF8B00">
+                                <div id="watertemp11m"> 11 meters </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="DOColumn"> DO Column
+                        <div class="button-group-DO">
+                            <button class="button" style="background-color:#C06832" >
+                                <div id="dissolvedoxygen2m"> 2 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#814663">
+                                <div id="dissolvedoxygen5m"> 5 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#412395">
+                                <div id="dissolvedoxygen8m"> 8 meters </div>
+                            </button>
+                            <button class="button" style="background-color:#0200C6">
+                                <div id="dissolvedoxygen11m"> 11 meters </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="main.js"> </script>
+    </body>
+</html>
+

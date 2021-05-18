@@ -1,0 +1,58 @@
+---
+title: "Thermocline Dpeth"
+author: "Mikaela Berg"
+date: "4/21/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Found how to cacualte thermocline depth from this [link](https://www.rdocumentation.org/packages/rLakeAnalyzer/versions/1.11.4.1/topics/thermo.depth)
+
+
+```{r message=FALSE}
+library(rLakeAnalyzer)
+library(tidyverse)
+library(ggplot2)
+library(ggthemes)
+```
+
+
+
+```{r message=FALSE}
+Thermocline_Depth <- read_csv("MikaelaW21/CIS671/Project/Thermocline Depth.csv")
+Thermocline_Depth<- Thermocline_Depth %>%
+  rename(Depth= `Measure Names` ) %>%
+  rename(Temps= `Measure Values` ) %>%
+  drop_na() %>%
+  group_by(Depth) %>%
+  mutate(
+    avgtemp= mean(Temps)
+  ) %>%
+  select(Depth, avgtemp) %>%
+  unique() %>%
+  arrange(desc(Depth))
+
+Thermocline_Depth
+```
+
+
+
+
+```{r}
+thermo.depth(Thermocline_Depth$avgtemp, Thermocline_Depth$Depth, Smin = 0.1, seasonal = TRUE, index = FALSE,
+  mixed.cutoff = 1)
+
+```
+
+```{r}
+ggplot(Thermocline_Depth, aes(x=Depth, y=avgtemp))+
+  geom_line()+
+  geom_vline(aes(xintercept=9), colour="blue", lwd = 2, linetype="dotted")+
+  labs(
+    title= "Thermocline Depth of Muskegon Lake"
+  )+
+  theme_classic()
+```

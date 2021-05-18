@@ -1,0 +1,618 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(236, 236, 236);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Header{
+  background-color: #f1f1f1;
+
+}
+
+.Title{
+  font-size: 200%;
+}
+/*Nav Bar Content*/
+
+.NavBar{
+  background-color: #343f7a;
+  border: 1px rgba(0, 0, 0, 0.555);
+  padding: 15px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+/*AWRI Link Buttons*/
+a:link, a:visited {
+  background-color: #3f4fac;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+/*AWRI Link Buttons*/
+a:hover, a:active {
+  background-color: rgb(84, 84, 202);
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+/* Style The Dropdown Button For Graph*/
+.dropbtn {
+    background-color: #4c5baf;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+  }
+
+  .btn {
+    background-color: #4c5baf;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+  }
+
+button{
+  background-color:#4c5baf; /* Green */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+    float: right;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: rgba(0, 0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: rgb(84, 84, 202);
+  }
+
+/*Main Page Content*/
+
+.MainPage{
+  width: 100%;
+  float: left; /*Not sure what I can use in replace of this*/
+}
+
+.GraphBin {
+  overflow: auto;
+  float: right;
+  width: 65%;
+  height: 100%;
+
+  background-color: white;
+  padding: 16px;
+  font-size: 16px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.GraphFooter {
+  overflow: auto;
+  float: bottom;
+  width: 100%;
+  height: 25%;
+
+  background-color: white;
+  padding: 16px;
+  font-size: 16px;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.TimeSlider {
+  float: left;
+  height: 50%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background:  rgb(84, 84, 202);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background:#4c5baf;
+}
+
+.DownloadData {
+  float: right;
+  height: 25%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+
+}
+
+.GraphLegend {
+  float: right;
+  height: 75px;
+  width: 35%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+
+  padding: 5px;
+}
+
+.NonGraphData{
+  float: left;
+  height: 878px;
+  width: 35%;
+  background-color: white;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+
+
+.WindSpeed {
+  float: left;
+  height: 75%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+.WaterColumn {
+  float: left;
+  height: 75%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+
+}
+
+
+.DOColumn {
+  float: right;
+  height: 75%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+/*the inputs for the DO column are going to be put in a vertical button for now*/
+
+.button-group-DO .button {
+  background-color:  #3f4fac;
+  border: 1px solid rgb(0, 2, 128);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+  display: block;
+}
+
+.button-group-DO .button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+.button-group-DO .button:hover {
+  background-color: #3e538e;
+}
+
+.button-group-WaterTemp .button {
+  background-color:  #3f4fac;
+  border: 1px solid rgb(0, 2, 128);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+  display: block;
+}
+
+.button-group-WaterTemp .button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+.button-group-WaterTemp .button:hover {
+  background-color: #3e538e;
+}
+
+
+.AirData {
+  float: right;
+  height: 25%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.ChlroData{
+  float: right;
+  height: 25%;
+  width: 45%;
+  font-size: 100%;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.PhycoData {
+  float: right;
+  height: 25%;
+  width: 45%;
+  font-size: 16px;
+  background-color: white;
+
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+
+  margin: 5px;
+  padding: 5px;
+}
+
+
+/*From the following Links:
+https://www.youtube.com/watch?v=FnUkVcQ_3CQ
+https://codepen.io/dcode-software/pen/zYGVXyX
+*/
+
+.gauge1 {
+  width: 100%;
+  max-width: 250px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: #004033;
+}
+
+.gauge__body1 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background:linear-gradient(to right, lightgray , darkgray);
+  position: relative;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+}
+
+.gauge__fill1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: linear-gradient(to right, blue , orange, red);
+  transform-origin: center top;
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+
+.gauge__cover1 {
+  width: 75%;
+  height: 150%;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Text */
+  font-size: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+}
+
+
+.gauge2 {
+  width: 100%;
+  max-width: 250px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  color: #004033;
+}
+
+.gauge__body2 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: linear-gradient(to right, lightgray , darkgray);
+  position: relative;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+}
+
+.gauge__fill2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: linear-gradient(to right, blue , orange, red) ;
+  transform-origin: center top;
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+
+.gauge__cover2 {
+  width: 75%;
+  height: 150%;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Text */
+  font-size: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+}
+
+/* https://github.com/jamesgpearce/compios5/blob/master/index.html
+body {
+  background: black;
+  margin:0;
+  height:460px;
+}
+#compass {
+  background-image:-webkit-radial-gradient(30% 30%, #FFEE72, #666900);
+  margin:auto;
+  border-radius:130px;
+  width:240px;
+  height:240px;
+  display:block;
+}
+@media (orientation:landscape) {
+  #compass {
+      margin-top:20px;
+  }
+}
+@media (orientation:portrait) {
+  #compass {
+      margin-top:80px;
+  }
+}
+#spinner {
+  background-image:-webkit-radial-gradient(30% 30%, #FFF6F4, #D1C790);
+  box-shadow:0 0 4px #444 inset;
+  position:relative;
+  top:20px;
+  left:20px;
+  border-radius:100px;
+  width:200px;
+  height:200px;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+#pin {
+  background-image:-webkit-radial-gradient(30% 30%, #FFEE72, #666900);
+  box-shadow:0 0 4px #444;
+  position:relative;
+  top:90px;
+  left:90px;
+  border-radius:10px;
+  width:20px;
+  height:20px;
+}
+.degree, .point, .arrow {
+  position:absolute;
+  left:80px;
+  width:40px;
+  text-align:center;
+  top:5px;
+  -webkit-transform-origin:20px 95px;
+}
+.degree {
+  color:#222;
+}
+.point {
+  top:45px;
+  -webkit-transform-origin:20px 55px;
+  font-size:10px;
+}
+.point.main {
+  font-weight:bold;
+  font-size:larger;
+}
+.arrow {
+  left:95px;
+  top:35px;
+  -webkit-transform-origin:5px 65px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #777;
+}
+.arrow.main {
+  border-bottom: 10px solid #444;
+}
+
+*/
+
+
+.filler{
+  float: left;
+  height: 150px;
+  width: 45%;
+  font-size: 100%;
+  background-color: white;
+
+
+
+  margin: 5px;
+  padding: 5px;
+}
+
