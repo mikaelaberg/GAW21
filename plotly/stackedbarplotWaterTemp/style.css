@@ -1,3 +1,12 @@
-#chart {
+#chart1 {
   height: 100%;
+}
+
+#chart2 {
+  height: 100%;
+}
+
+.demo-container {
+  display: flex;
+  background-color: bisque;
 }
