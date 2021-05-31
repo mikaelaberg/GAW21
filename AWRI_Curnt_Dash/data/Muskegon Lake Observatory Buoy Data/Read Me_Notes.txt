@@ -1,0 +1,40 @@
+Last Updated September 28, 2020
+
+In this folder you will see the Master File and a list of subfolders of different parameters measured by the Muskegon Lake Observatory Buoy (MLO)
+
+USE THE MASTER EXCEL FILE TO GET SIMPLE BUOY DATA
+
+Master file contains spreadsheets of the same edited data from files within each parameters folder, just combined into one single file
+There are no data in the Master file that aren't in files in the parameter folders
+Parameter folders are where unedited and edited files are located for any QA/QC purposes and transparency
+	For example, chl and phyco data are a combination of 2 different types of sensors (YSI and Turner) as well as the bottom-most water temp (YSI and NEXSENS)
+	So original data and combined data can all be seen in these folders as a matter of transparency
+	Notes on data are contained in the edit file for each parameter as well
+
+Data are from 2011 through 2019
+
+Parameters Completed to date:
+	Meteorological
+	Water Temperature
+	Dissolved Oxygen
+	Chlorophyll a & Phycocyanin
+	YSI Depth
+	Nitrate
+	PAR (photosynthetically active radiation)
+	pH & ORP
+	Specific Conductivity
+	Turbidity
+
+For questions email:
+
+1.	Biddanda Lab Manager	Anthony Weinke	(weinkea@mail.gvsu.edu) *edited data
+2.	Principle Investigator	Bopi Biddanda	(biddandb@gvsu.edu)
+
+
+Data Attribution
+Muskegon Lake Observatory data used should be cited with the following language:
+
+Biddanda, B., S. Kendall, and A. Weinke (YEAR). Muskegon Lake Observatory Data. 
+Annis Water Resources Institute, Grand Valley State University, Muskegon, MI, USA (www.gvsu.edu/buoy)
+
+For the YEAR, enter the latest year of data used.  For example, if data was used from 2016-2017, enter 2017 as the year cited.
