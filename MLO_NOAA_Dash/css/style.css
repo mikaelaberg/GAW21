@@ -1,16 +1,33 @@
-#chart-demo {
-    height: 600px;
+#chart-demo1 {
+  height: 600px;
 }
 
-#radarChart {
-    height: 500px;
+#radarChart1 {
+  height: 500px;
 }
 
-#chart-demo > .center {
-	text-align: center;
+#chart-demo1 > .center {
+  text-align: center;
 }
 
-#chart-demo > .center > .dx-widget {
-    display: inline-block;
-    vertical-align: middle;
+#chart-demo1 > .center > .dx-widget {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#chart-demo2 {
+  height: 600px;
+}
+
+#radarChart2 {
+  height: 500px;
+}
+
+#chart-demo2 > .center {
+  text-align: center;
+}
+
+#chart-demo2 > .center > .dx-widget {
+  display: inline-block;
+  vertical-align: middle;
 }

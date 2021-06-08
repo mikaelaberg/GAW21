@@ -9,8 +9,13 @@ header {
 
 .RightSide {
   background-color: aliceblue;
+  overflow: auto;
+  float: top;
 }
 
 .LeftSide {
+  flex: auto;
   background-color: azure;
+  overflow: auto;
+  float: bottom;
 }
