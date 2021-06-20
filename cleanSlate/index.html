@@ -8,17 +8,6 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <script>
-        console.log("Hello World");
-        const api_url =
-          'https://www.gvsu.edu/wri/buoy/data-generate.htm?calculation=avg&callback=&disjoined=1&graph=line&height=400&time=&width=600&yindividual=0&ymax=74.4&ymin=56.12&concentration=1&date=6/17/21&x=date&y=atmp1,tp001,tp006&format=json';
-        async function getWeather() {
-          const response = await fetch(api_url);
-          cont data = await response.json();
-          console.log(data);
-        }
-
-      getWeather();
-    </script>
+    <script type="text/javascript" src="data.js"></script>
   </body>
 </html>
