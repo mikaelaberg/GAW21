@@ -17,5 +17,3 @@ getData().then((res) => {
 //    charactersDiv.append(characterElement);
 //  });
 //};
-
-function
