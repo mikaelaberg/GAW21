@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GVSU Current Conditions Data Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+    </script>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>GVSU Current Conditions Data Dashboard</h1>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-index.htm"
+                target="_blank"
+              >
+                Data Grapher
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-current.htm"
+                target="_blank"
+              >
+                Current Conditions
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-api.htm"
+                target="_blank"
+              >
+                API
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm"
+                target="_blank"
+              >
+                Disclaimer</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.glerl.noaa.gov/res/recon/station-mkg.html"
+                target="_blank"
+              >
+                NOAA Muskegon Buoy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="Graphs">
+        <!--Graph Interface-->
+        <hgroup>
+          <h2>Current Conditions Graphs</h2>
+        </hgroup>
+        <div
+          id="container"
+          style="width: 550px; height: 400px; margin: 0 auto"
+        ></div>
+      </section>
+      <section class="Wigets">
+        <h2>Metorgioncal And Weather Widgets</h2>
+        <section class="Windrose">WindRose</section>
+        <section class="AirData">AirData</section>
+        <section class="Gauges">Gauges</section>
+        <section class="WaterColumn">WaterColumns</section>
+      </section>
+    </div>
+    <!--wrapper-->
+    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+  </body>
+</html>
