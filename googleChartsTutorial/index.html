@@ -14,65 +14,69 @@
     </script>
   </head>
   <body>
-    <header>
-      <h1>GVSU Current Conditions Data Dashboard</h1>
-      <nav>
-        <ul>
-          <li>
-            <a
-              href="https://www.gvsu.edu/wri/buoy/data-index.htm"
-              target="_blank"
-            >
-              Data Grapher
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.gvsu.edu/wri/buoy/data-current.htm"
-              target="_blank"
-            >
-              Current Conditions
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.gvsu.edu/wri/buoy/data-api.htm"
-              target="_blank"
-            >
-              API
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm"
-              target="_blank"
-            >
-              Disclaimer</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.glerl.noaa.gov/res/recon/station-mkg.html"
-              target="_blank"
-            >
-              NOAA Muskegon Buoy
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section class="Graphs">
-      <!--Graph Interface-->
-      <hgroup>
-        <h2>Current Conditions Graphs</h2>
-      </hgroup>
-    </section>
-    <section class="Wigets">
-      <h2>Metorgioncal And Weather Widgets</h2>
-      <div id="Sarah_chart_div"></div>
-      <div id="Chris_chart_div"></div>
-      <div id="chart_div"></div>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>GVSU Current Conditions Data Dashboard</h1>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-index.htm"
+                target="_blank"
+              >
+                Data Grapher
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-current.htm"
+                target="_blank"
+              >
+                Current Conditions
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-api.htm"
+                target="_blank"
+              >
+                API
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.gvsu.edu/wri/buoy/data-disclaimer-11.htm"
+                target="_blank"
+              >
+                Disclaimer</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.glerl.noaa.gov/res/recon/station-mkg.html"
+                target="_blank"
+              >
+                NOAA Muskegon Buoy
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="Graphs">
+        <!--Graph Interface-->
+        <hgroup>
+          <h2>Current Conditions Graphs</h2>
+        </hgroup>
+      </section>
+      <section class="Widget">
+        <h2>Metorgioncal And Weather Widgets</h2>
+        <section class="table">
+          <div id="Sarah_chart_div"></div>
+          <div id="Chris_chart_div"></div>
+          <div id="chart_div"></div>
+        </section>
+      </section>
+    </div>
     <script type="text/javascript" src="scripts.js"></script>
     <script type="text/javascript" src="data.js"></script>
   </body>
