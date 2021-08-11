@@ -2,14 +2,8 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.load("current", { packages: ["gauge"] });
 
-// Draw the pie chart for Sarah's pizza when Charts is loaded.
 google.charts.setOnLoadCallback(drawSarahChart);
-
-// Draw the pie chart for the Anthony's pizza when Charts is loaded.
-google.charts.setOnLoadCallback(drawAnthonyChart);
-
 google.charts.setOnLoadCallback(drawChrisChart);
-
 google.charts.setOnLoadCallback(drawChart);
 
 // Callback that draws the pie chart for Sarah's pizza.
