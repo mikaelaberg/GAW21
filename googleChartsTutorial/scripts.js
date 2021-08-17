@@ -2,73 +2,15 @@
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.load("current", { packages: ["gauge"] });
 
-google.charts.setOnLoadCallback(drawSarahChart);
-google.charts.setOnLoadCallback(drawChrisChart);
 google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawLineChart);
 
-// Callback that draws the pie chart for Sarah's pizza.
-function drawSarahChart() {
-  // Create the data table for Sarah's pizza.
-  var data = new google.visualization.DataTable();
-  data.addColumn("string", "Topping");
-  data.addColumn("number", "Slices");
-  data.addRows([
-    ["Mushrooms", 1],
-    ["Onions", 1],
-    ["Olives", 2],
-    ["Zucchini", 2],
-    ["Pepperoni", 1],
-  ]);
-
-  // Set options for Sarah's pie chart.
-  var options = {
-    title: "How Much Pizza Sarah Ate Last Night",
-    width: 400,
-    height: 300,
-  };
-
-  // Instantiate and draw the chart for Sarah's pizza.
-  var chart = new google.visualization.PieChart(
-    document.getElementById("Sarah_chart_div")
-  );
-  chart.draw(data, options);
-}
-
-// Callback that draws the pie chart for Anthony's pizza.
-function drawChrisChart() {
-  // Create the data table for Anthony's pizza.
-  var data = new google.visualization.DataTable();
-  data.addColumn("string", "Topping");
-  data.addColumn("number", "Slices");
-  data.addRows([
-    ["Mushrooms", 2],
-    ["Onions", 2],
-    ["Olives", 2],
-    ["Zucchini", 0],
-    ["Pepperoni", 3],
-  ]);
-
-  // Set options for Anthony's pie chart.
-  var options = {
-    title: "How Much Pizza Anthony Ate Last Night",
-    width: 400,
-    height: 300,
-  };
-
-  // Instantiate and draw the chart for Anthony's pizza.
-  var chart = new google.visualization.PieChart(
-    document.getElementById("Chris_chart_div")
-  );
-  chart.draw(data, options);
-}
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
     ["Label", "Value"],
     ["Memory", 80],
-    ["CPU", 55],
-    ["Network", 68],
+    ["CPU", 55]
   ]);
 
   var options = {
@@ -100,6 +42,7 @@ function drawChart() {
     chart.draw(data, options);
   }, 26000);
 }
+
 function drawLineChart() {
   var data = google.visualization.arrayToDataTable([
     ['Year', 'Sales', 'Expenses'],
@@ -121,60 +64,60 @@ function drawLineChart() {
 }
 
 //windrose
-window.onload = function() {
-  var dataSourceValue = ko.observable(dataSource[0].values);
-  
-  var viewModel = {
-      polarChartOptions: {
-          palette: "soft",
-          dataSource: dataSourceValue,
-          title: "Wind Rose, Philadelphia PA",
-          commonSeriesSettings: {
-              type: "stackedbar"
-          },
-          margin: {
-              bottom: 50,
-              left: 100
-          },
-          onLegendClick: function(e){
-              var series = e.target;
-              if (series.isVisible()) {
-                  series.hide();
-              } else {
-                  series.show();
-              }
-          },
-          argumentAxis: {
-              discreteAxisDivisionMode: "crossLabels",
-              firstPointOnStartAngle: true
-          }, 
-          valueAxis: {
-              valueMarginsEnabled: false
-          },
-          "export": {
-             enabled: true
-          },
-          series: [{ valueField: "val1", name: "1.3-4 m/s" },
-                  { valueField: "val2", name: "4-8 m/s" },
-                  { valueField: "val3", name: "8-13 m/s" },
-                  { valueField: "val4", name: "13-19 m/s" },
-                  { valueField: "val5", name: "19-25 m/s" },
-                  { valueField: "val6", name: "25-32 m/s" },
-                  { valueField: "val7", name: "32-39 m/s" },
-                  { valueField: "val8", name: "39-47 m/s" }
-          ]
+$(function(){
+  var radarOptions = {
+      palette: "soft",
+      dataSource: dataSource[0].values,
+      title: "Wind Rose, Philadelphia PA",
+      commonSeriesSettings: {
+          type: "stackedbar"
       },
-      selectBoxOptions: {
-          width: 300,
-          dataSource: dataSource,
-          displayExpr: "period",
-          valueExpr: "values",
-          value: dataSourceValue,
-      }
+      margin: {
+          bottom: 50,
+          left: 100
+      },
+      onLegendClick: function(e){
+          var series = e.target;
+          if (series.isVisible()) {
+              series.hide();
+          } else {
+              series.show();
+          }
+      },
+      argumentAxis: {
+          discreteAxisDivisionMode: "crossLabels",
+          firstPointOnStartAngle: true
+      }, 
+      valueAxis: {
+          valueMarginsEnabled: false
+      },
+      "export": {
+          enabled: true
+      },
+      series: [{ valueField: "val1", name: "1.3-4 m/s" },
+              { valueField: "val2", name: "4-8 m/s" },
+              { valueField: "val3", name: "8-13 m/s" },
+              { valueField: "val4", name: "13-19 m/s" },
+              { valueField: "val5", name: "19-25 m/s" },
+              { valueField: "val6", name: "25-32 m/s" },
+              { valueField: "val7", name: "32-39 m/s" },
+              { valueField: "val8", name: "39-47 m/s" }
+      ]
   };
   
-  ko.applyBindings(viewModel, document.getElementById("chart-demo"));
-};
+  var radar = $("#radarChart").dxPolarChart(radarOptions).dxPolarChart("instance");
+  
+  $("#radarPeriods").dxSelectBox({
+      width: 300,
+      dataSource: dataSource,
+      displayExpr: "period",
+      valueExpr: "values",
+      value: dataSource[0].values,
+      onValueChanged: function(e){
+          radar.option("dataSource", e.value);
+      }
+  });
+});
 
 var dataSource = [{
       period: "Sep. 1, 2012 -  Oct. 1, 2012",
