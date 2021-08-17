@@ -2,6 +2,17 @@
 <html lang="en">
   <head>
     <title>GVSU Current Conditions Data Dashboard</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.1.5/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.1.5/css/dx.light.css" />
+    <script src="https://cdn3.devexpress.com/jslib/21.1.5/js/dx.all.js"></script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
@@ -75,8 +86,15 @@
       <section class="Widget">
         <h2>Metorgioncal And Weather Widgets</h2>
         <section class="table">
-          <div id="Sarah_chart_div"></div>
-          <div id="Chris_chart_div"></div>
+          <div class="dx-viewport demo-container" >
+            <div id="chart-demo">
+                <div id="radarChart" data-bind="dxPolarChart: polarChartOptions" ></div>
+                <center>
+                    <div data-bind="dxSelectBox: selectBoxOptions" ></div>
+                </center>
+              </div>
+          </div>
+
           <div id="chart_div"></div>
         </section>
       </section>
