@@ -63,11 +63,5 @@ section.Widget {
   border-left: 1px solid #8377ec;
 }
 
-section.line_chart_section.article{
-  float: left;
-}
 
-section.line_chart_section.curve_chart{
-  float: right;
-}
 
