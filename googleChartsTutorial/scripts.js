@@ -5,6 +5,7 @@ google.charts.load("current", { packages: ["gauge"] });
 google.charts.setOnLoadCallback(drawSarahChart);
 google.charts.setOnLoadCallback(drawChrisChart);
 google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawLineChart);
 
 // Callback that draws the pie chart for Sarah's pizza.
 function drawSarahChart() {
@@ -98,4 +99,23 @@ function drawChart() {
     data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
     chart.draw(data, options);
   }, 26000);
+}
+function drawLineChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Year', 'Sales', 'Expenses'],
+    ['2004',  1000,      400],
+    ['2005',  1170,      460],
+    ['2006',  660,       1120],
+    ['2007',  1030,      540]
+  ]);
+
+  var options = {
+    title: 'Company Performance',
+    curveType: 'function',
+    legend: { position: 'bottom' }
+  };
+
+  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+  chart.draw(data, options);
 }
