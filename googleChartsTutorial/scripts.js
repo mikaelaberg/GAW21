@@ -4,6 +4,7 @@ google.charts.load("current", { packages: ["gauge"] });
 
 google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawLineChart);
+google.charts.setOnLoadCallback(drawStackedChart);
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
@@ -15,10 +16,12 @@ function drawChart() {
   var options = {
     width: 400,
     height: 120,
-    redFrom: 90,
+    greenFrom: 0,
+    greenTo: 35,
+    yellowFrom: 35,
+    yellowTo: 75,
+    redFrom: 75,
     redTo: 100,
-    yellowFrom: 75,
-    yellowTo: 90,
     minorTicks: 5,
   };
 
@@ -77,6 +80,45 @@ function drawLineChart() {
   );
 
   chart.draw(data, options);
+}
+
+function drawStackedChart() {
+  var data = google.visualization.arrayToDataTable([
+    [
+      "Column Name",
+      "2 Meters",
+      "4 Meters",
+      "7 Meters",
+      "9 Meters",
+      "11 Meters",
+    ],
+    ["Water Column", 71.3, 71.5, 71.4, 70.5, 62],
+    ["", 0, 0, 0, 0, 0],
+    ["Dissolved Oxygen", 8.53, 8.47, 7.36, 5.7, 5.7],
+  ]);
+  var options_fullStacked = {
+    isStacked: "relative",
+    height: 300,
+    legend: { position: "top", maxLines: 3 },
+    vAxis: {
+      minValue: 0,
+      ticks: [0, 0.3, 0.6, 0.9, 1],
+    },
+  };
+  var options_fullStacked = {
+    isStacked: "relative",
+    height: 300,
+    legend: { position: "top", maxLines: 3 },
+    vAxis: {
+      minValue: 0,
+      ticks: [0, 0.3, 0.6, 0.9, 1],
+    },
+  };
+  var chart = new google.visualization.SteppedAreaChart(
+    document.getElementById("chart_div_stacked")
+  );
+
+  chart.draw(data, options_fullStacked);
 }
 
 //windrose
