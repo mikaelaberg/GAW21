@@ -63,7 +63,12 @@ section.Widget {
   border-left: 1px solid #8377ec;
 }
 
+#text_box {
+  float: right;
+}
+
 /*windrose*/
+
 #chart-demo {
   height: 600px;
 }
