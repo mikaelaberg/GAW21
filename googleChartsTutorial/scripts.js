@@ -14,8 +14,6 @@ function drawChart() {
   ]);
 
   var options = {
-    width: 400,
-    height: 120,
     greenFrom: 0,
     greenTo: 35,
     yellowFrom: 35,
@@ -98,22 +96,14 @@ function drawStackedChart() {
   ]);
   var options_fullStacked = {
     isStacked: "relative",
-    height: 300,
+    height: 500,
     legend: { position: "top", maxLines: 3 },
     vAxis: {
       minValue: 0,
       ticks: [0, 0.3, 0.6, 0.9, 1],
     },
   };
-  var options_fullStacked = {
-    isStacked: "relative",
-    height: 300,
-    legend: { position: "top", maxLines: 3 },
-    vAxis: {
-      minValue: 0,
-      ticks: [0, 0.3, 0.6, 0.9, 1],
-    },
-  };
+
   var chart = new google.visualization.SteppedAreaChart(
     document.getElementById("chart_div_stacked")
   );

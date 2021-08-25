@@ -63,8 +63,23 @@ section.Widget {
   border-left: 1px solid #8377ec;
 }
 
+#blank_box {
+  float: left;
+  width: 100px;
+}
+
+#chart_div {
+  height: auto;
+  width: auto;
+}
+
+#chart_div_stacked {
+  height: auto;
+  width: auto;
+}
+
 #text_box {
-  float: right;
+  float: left;
 }
 
 /*windrose*/
