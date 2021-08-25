@@ -95,6 +95,7 @@ function drawStackedChart() {
     ["Dissolved Oxygen", 8.53, 8.47, 7.36, 5.7, 5.7],
   ]);
   var options_fullStacked = {
+    colors: ["#026efc", "#0b9bc6", "#49d3e5", "#e8c127", "#e88a27"],
     isStacked: "relative",
     height: 500,
     legend: { position: "top", maxLines: 3 },
