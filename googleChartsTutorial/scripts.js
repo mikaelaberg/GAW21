@@ -94,6 +94,22 @@ function drawStackedChart() {
     ["", 0, 0, 0, 0, 0],
     ["Dissolved Oxygen", 8.53, 8.47, 7.36, 5.7, 5.7],
   ]);
+
+  var view = new google.visualization.DataView(data);
+  view.setColumns([
+    0,
+    1,
+    { calc: "stringify", sourceColumn: 1, type: "string", role: "annotation" },
+    2,
+    { calc: "stringify", sourceColumn: 2, type: "string", role: "annotation" },
+    3,
+    { calc: "stringify", sourceColumn: 3, type: "string", role: "annotation" },
+    4,
+    { calc: "stringify", sourceColumn: 4, type: "string", role: "annotation" },
+    5,
+    { calc: "stringify", sourceColumn: 5, type: "string", role: "annotation" },
+  ]);
+
   var options_fullStacked = {
     colors: ["#026efc", "#0b9bc6", "#49d3e5", "#e8c127", "#e88a27"],
     isStacked: "relative",
@@ -109,7 +125,7 @@ function drawStackedChart() {
     document.getElementById("chart_div_stacked")
   );
 
-  chart.draw(data, options_fullStacked);
+  chart.draw(view, options_fullStacked);
 }
 
 //windrose
