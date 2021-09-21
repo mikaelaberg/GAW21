@@ -29,6 +29,9 @@ function drawChart() {
 
   chart.draw(data, options);
 
+  //The functions below is something that I included to show
+  // when the arrow moves in the gauge. This is not relevant
+  // to the  data we would use for this.
   setInterval(function () {
     data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
     chart.draw(data, options);
@@ -187,6 +190,8 @@ $(function () {
   });
 });
 
+// The values for the below are fake data that come from
+// the jQuery windrose template.
 var dataSource = [
   {
     period: "Aug. 19, 2021 12am-Aug. 19, 2021 12pm",
